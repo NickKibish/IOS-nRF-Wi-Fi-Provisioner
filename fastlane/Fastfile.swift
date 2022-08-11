@@ -9,6 +9,10 @@
 import Foundation
 
 class Fastfile: LaneFile {
+    func simpleLane() {
+        desc("This is a simpliest lane")
+    }
+    
     func betaLane() {
         desc("Increment build number, build app and deploy to TestFlight")
         
