@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		011A2613287CAF890004A5C4 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011A2612287CAF890004A5C4 /* BluetoothManager.swift */; };
 		011A2614287CAF890004A5C4 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011A2612287CAF890004A5C4 /* BluetoothManager.swift */; };
+		0144816228A4616F00907C3F /* AsyncBluetooth in Frameworks */ = {isa = PBXBuildFile; productRef = 0144816128A4616F00907C3F /* AsyncBluetooth */; };
+		0144816428A4626600907C3F /* ScanData+Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0144816328A4626600907C3F /* ScanData+Hash.swift */; };
+		0144816528A4626600907C3F /* ScanData+Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0144816328A4626600907C3F /* ScanData+Hash.swift */; };
 		01481AAB2852093000925FAB /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01481AAA2852093000925FAB /* Tests_iOS.swift */; };
 		01481AAD2852093000925FAB /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01481AAC2852093000925FAB /* Tests_iOSLaunchTests.swift */; };
 		01481AB72852093000925FAB /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01481AB62852093000925FAB /* Tests_macOS.swift */; };
@@ -41,8 +44,6 @@
 		019DCE2A2885A15100E16E9F /* FilterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019DCE282885A15100E16E9F /* FilterList.swift */; };
 		01A0C289288853EB000AA135 /* NordicStyle in Frameworks */ = {isa = PBXBuildFile; productRef = 01A0C288288853EB000AA135 /* NordicStyle */; };
 		01A0C28B288853F2000AA135 /* NordicStyle in Frameworks */ = {isa = PBXBuildFile; productRef = 01A0C28A288853F2000AA135 /* NordicStyle */; };
-		01A0C28D28885447000AA135 /* AsyncBluetooth in Frameworks */ = {isa = PBXBuildFile; productRef = 01A0C28C28885447000AA135 /* AsyncBluetooth */; };
-		01A0C28F28885452000AA135 /* AsyncBluetooth in Frameworks */ = {isa = PBXBuildFile; productRef = 01A0C28E28885452000AA135 /* AsyncBluetooth */; };
 		01A0C29528896343000AA135 /* DeviceViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0C29428896343000AA135 /* DeviceViewModelFactory.swift */; };
 		01A0C29628896343000AA135 /* DeviceViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0C29428896343000AA135 /* DeviceViewModelFactory.swift */; };
 		01A43DEB2886FECB0025A5C4 /* DeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A43DEA2886FECB0025A5C4 /* DeviceView.swift */; };
@@ -88,6 +89,7 @@
 
 /* Begin PBXFileReference section */
 		011A2612287CAF890004A5C4 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		0144816328A4626600907C3F /* ScanData+Hash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScanData+Hash.swift"; sourceTree = "<group>"; };
 		01481A922852092F00925FAB /* nRF_Wi_Fi_ProvisionerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nRF_Wi_Fi_ProvisionerApp.swift; sourceTree = "<group>"; };
 		01481A932852092F00925FAB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		01481A942852093000925FAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,7 +119,6 @@
 		01A43DED2886FED80025A5C4 /* DeviceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceViewModel.swift; sourceTree = "<group>"; };
 		01C0F0F9287DE864008BBE46 /* ScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
 		01C0F0FC287DE926008BBE46 /* ScanResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResult.swift; sourceTree = "<group>"; };
-		01CC13C728880D8800426601 /* AsyncBluetooth */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AsyncBluetooth; path = ../AsyncBluetooth; sourceTree = "<group>"; };
 		01D26B55286DA3D400FD069D /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		01D26B5A286DAE9800FD069D /* LocalizationKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationKey.swift; sourceTree = "<group>"; };
 		01FA5911288713860008AF88 /* ReadableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadableError.swift; sourceTree = "<group>"; };
@@ -132,7 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01FA5917288809390008AF88 /* Provisioner in Frameworks */,
-				01A0C28F28885452000AA135 /* AsyncBluetooth in Frameworks */,
+				0144816228A4616F00907C3F /* AsyncBluetooth in Frameworks */,
 				01A0C289288853EB000AA135 /* NordicStyle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,7 +143,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				01FA5915288809220008AF88 /* Provisioner in Frameworks */,
-				01A0C28D28885447000AA135 /* AsyncBluetooth in Frameworks */,
 				01A0C28B288853F2000AA135 /* NordicStyle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,7 +175,6 @@
 		01481A8C2852092F00925FAB = {
 			isa = PBXGroup;
 			children = (
-				01CC13C728880D8800426601 /* AsyncBluetooth */,
 				01A43DE82886CC080025A5C4 /* Provisioner */,
 				019A5D8D286C77CE002D03F0 /* NordicStyle */,
 				01481A912852092F00925FAB /* Shared */,
@@ -255,6 +254,7 @@
 				019DCE24288553E700E16E9F /* CGRect+Ext.swift */,
 				33976AAF8A53D43BC33F0ED9 /* WiFiStatus+Ext.swift */,
 				01922CBF28A2A48300492E87 /* Label+Ext.swift */,
+				0144816328A4626600907C3F /* ScanData+Hash.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -370,7 +370,7 @@
 			packageProductDependencies = (
 				01FA5916288809390008AF88 /* Provisioner */,
 				01A0C288288853EB000AA135 /* NordicStyle */,
-				01A0C28E28885452000AA135 /* AsyncBluetooth */,
+				0144816128A4616F00907C3F /* AsyncBluetooth */,
 			);
 			productName = "nRF-Wi-Fi-Provisioner (iOS)";
 			productReference = 01481A992852093000925FAB /* nRF-Wi-Fi-Provisioner.app */;
@@ -392,7 +392,6 @@
 			packageProductDependencies = (
 				01FA5914288809220008AF88 /* Provisioner */,
 				01A0C28A288853F2000AA135 /* NordicStyle */,
-				01A0C28C28885447000AA135 /* AsyncBluetooth */,
 			);
 			productName = "nRF-Wi-Fi-Provisioner (macOS)";
 			productReference = 01481A9F2852093000925FAB /* nRF-Wi-Fi-Provisioner.app */;
@@ -470,6 +469,7 @@
 			);
 			mainGroup = 01481A8C2852092F00925FAB;
 			packageReferences = (
+				0144816028A4616F00907C3F /* XCRemoteSwiftPackageReference "AsyncBluetooth" */,
 			);
 			productRefGroup = 01481A9A2852093000925FAB /* Products */;
 			projectDirPath = "";
@@ -543,6 +543,7 @@
 				01FA5912288713860008AF88 /* ReadableError.swift in Sources */,
 				011A2613287CAF890004A5C4 /* BluetoothManager.swift in Sources */,
 				3397680D2FE5FBB193E7A5EE /* BluetoothRSSI.swift in Sources */,
+				0144816428A4626600907C3F /* ScanData+Hash.swift in Sources */,
 				0183EFC92897C196002E79A5 /* Status.swift in Sources */,
 				3397689B2FD60C49322F3E29 /* WiFiRSSI.swift in Sources */,
 				33976B5960D8927917CD726E /* WiFiStatus+Ext.swift in Sources */,
@@ -573,6 +574,7 @@
 				01FA5913288713860008AF88 /* ReadableError.swift in Sources */,
 				011A2614287CAF890004A5C4 /* BluetoothManager.swift in Sources */,
 				33976EFC0D92E4D7C58060E1 /* BluetoothRSSI.swift in Sources */,
+				0144816528A4626600907C3F /* ScanData+Hash.swift in Sources */,
 				0183EFCA2897C196002E79A5 /* Status.swift in Sources */,
 				33976EBA0FF55A009B0C55ED /* WiFiRSSI.swift in Sources */,
 				339768F56D7C8EC8A0DD8B25 /* WiFiStatus+Ext.swift in Sources */,
@@ -731,7 +733,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = P3R8YQEV4L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -763,7 +765,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = P3R8YQEV4L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -798,7 +800,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = P3R8YQEV4L;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -828,7 +830,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = P3R8YQEV4L;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -854,7 +856,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = P3R8YQEV4L;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
@@ -874,7 +876,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = P3R8YQEV4L;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
@@ -895,7 +897,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = P3R8YQEV4L;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
@@ -914,7 +916,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = P3R8YQEV4L;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
@@ -978,7 +980,23 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		0144816028A4616F00907C3F /* XCRemoteSwiftPackageReference "AsyncBluetooth" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/manolofdez/AsyncBluetooth.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		0144816128A4616F00907C3F /* AsyncBluetooth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0144816028A4616F00907C3F /* XCRemoteSwiftPackageReference "AsyncBluetooth" */;
+			productName = AsyncBluetooth;
+		};
 		01A0C288288853EB000AA135 /* NordicStyle */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NordicStyle;
@@ -986,14 +1004,6 @@
 		01A0C28A288853F2000AA135 /* NordicStyle */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NordicStyle;
-		};
-		01A0C28C28885447000AA135 /* AsyncBluetooth */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = AsyncBluetooth;
-		};
-		01A0C28E28885452000AA135 /* AsyncBluetooth */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = AsyncBluetooth;
 		};
 		01FA5914288809220008AF88 /* Provisioner */ = {
 			isa = XCSwiftPackageProductDependency;
