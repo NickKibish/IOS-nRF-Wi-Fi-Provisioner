@@ -14,6 +14,14 @@ class Fastfile: LaneFile {
         
         incrementBuildNumber()
         buildIosApp(xcodebuildFormatter: "xcpretty")
+        
+        let keyId = environmentVariable(get: "ASC_KEY_ID")
+        let issuerId = environmentVariable(get: "ASC_ISSUER_ID")
+        let keyContent = environmentVariable(get: "ASC_PRIVATE_KEY")
+        
+        desc("loaded keys: \(keyId), issuer: \(issuerId), keyContent: \(keyContent)")
+        
+        appStoreConnectApiKey(keyId: keyId, issuerId: issuerId, keyContent: OptionalConfigValue(stringLiteral: keyContent), isKeyContentBase64: true)
         uploadToTestflight()
     }
 }
