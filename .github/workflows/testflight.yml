@@ -1,9 +1,9 @@
 name: CD
 on:
   push:
-    branches: [ main ]
+    branches: [ "main", "develop", "feature/ci" ]
   pull_request:
-    branches: [ main ]
+    branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions a tab
   workflow_dispatch:
@@ -11,7 +11,7 @@ on:
 jobs:
   deploy:
     name: Deploying to Testflight
-    runs-on: macOS-latest
+    runs-on: self-hosted
     
     steps:
       - name: Checkout repository
