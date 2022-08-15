@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		013DE1EC28AA3C4200D9BF44 /* Matchfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013DE1EB28AA3C4200D9BF44 /* Matchfile.swift */; };
 		0311E387230AC1B20060BB5C /* Plugins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0311E386230AC1B20060BB5C /* Plugins.swift */; };
 		0311E38B230AC9490060BB5C /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0311E38A230AC9490060BB5C /* Actions.swift */; };
 		1257253924B7992C00E04FA3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1257253824B7992B00E04FA3 /* main.swift */; };
@@ -29,7 +30,6 @@
 		B3BA65AF1F5A2D5C00B34850 /* RunnerArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BA65AE1F5A2D5C00B34850 /* RunnerArgument.swift */; };
 		D55B28C31F6C588300DC42C5 /* Deliverfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B28BC1F6C588300DC42C5 /* Deliverfile.swift */; };
 		D55B28C41F6C588300DC42C5 /* Gymfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B28BD1F6C588300DC42C5 /* Gymfile.swift */; };
-		D55B28C51F6C588300DC42C5 /* Matchfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B28BE1F6C588300DC42C5 /* Matchfile.swift */; };
 		D55B28C61F6C588300DC42C5 /* Precheckfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B28BF1F6C588300DC42C5 /* Precheckfile.swift */; };
 		D55B28C71F6C588300DC42C5 /* Scanfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B28C01F6C588300DC42C5 /* Scanfile.swift */; };
 		D55B28C81F6C588300DC42C5 /* Screengrabfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B28C11F6C588300DC42C5 /* Screengrabfile.swift */; };
@@ -46,7 +46,7 @@
 		CA58CAD1F19BCF894BF70F33 /* FastlaneRunnerCopySigned */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = $SRCROOT/../..;
+			dstPath = "$SRCROOT/../..";
 			dstSubfolderSpec = 0;
 			files = (
 				EF902640ECE660C563F20D4F /* FastlaneRunner in FastlaneRunnerCopySigned */,
@@ -57,6 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		013DE1EB28AA3C4200D9BF44 /* Matchfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Matchfile.swift; path = ../../Matchfile.swift; sourceTree = "<group>"; };
 		0311E386230AC1B20060BB5C /* Plugins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Plugins.swift; path = ../Plugins.swift; sourceTree = "<group>"; };
 		0311E38A230AC9490060BB5C /* Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Actions.swift; path = ../Actions.swift; sourceTree = "<group>"; };
 		1257253824B7992B00E04FA3 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = ../main.swift; sourceTree = "<group>"; };
@@ -84,7 +85,6 @@
 		D556D6A91F6A08F5003108E3 /* FastlaneRunner */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FastlaneRunner; sourceTree = BUILT_PRODUCTS_DIR; };
 		D55B28BC1F6C588300DC42C5 /* Deliverfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Deliverfile.swift; path = ../Deliverfile.swift; sourceTree = "<group>"; };
 		D55B28BD1F6C588300DC42C5 /* Gymfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gymfile.swift; path = ../Gymfile.swift; sourceTree = "<group>"; };
-		D55B28BE1F6C588300DC42C5 /* Matchfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Matchfile.swift; path = ../Matchfile.swift; sourceTree = "<group>"; };
 		D55B28BF1F6C588300DC42C5 /* Precheckfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Precheckfile.swift; path = ../Precheckfile.swift; sourceTree = "<group>"; };
 		D55B28C01F6C588300DC42C5 /* Scanfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scanfile.swift; path = ../Scanfile.swift; sourceTree = "<group>"; };
 		D55B28C11F6C588300DC42C5 /* Screengrabfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Screengrabfile.swift; path = ../Screengrabfile.swift; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 				D55B28BC1F6C588300DC42C5 /* Deliverfile.swift */,
 				D5A7C48E1F7C4DAF00A91DE6 /* Fastfile.swift */,
 				D55B28BD1F6C588300DC42C5 /* Gymfile.swift */,
-				D55B28BE1F6C588300DC42C5 /* Matchfile.swift */,
+				013DE1EB28AA3C4200D9BF44 /* Matchfile.swift */,
 				D55B28BF1F6C588300DC42C5 /* Precheckfile.swift */,
 				D55B28C01F6C588300DC42C5 /* Scanfile.swift */,
 				D55B28C11F6C588300DC42C5 /* Screengrabfile.swift */,
@@ -259,7 +259,6 @@
 				B3BA65A71F5A269100B34850 /* LaneFileProtocol.swift in Sources */,
 				D55B28C61F6C588300DC42C5 /* Precheckfile.swift in Sources */,
 				B302067F1F5E3E9000DE6EBD /* ScanfileProtocol.swift in Sources */,
-				D55B28C51F6C588300DC42C5 /* Matchfile.swift in Sources */,
 				B30206801F5E3E9000DE6EBD /* ScreengrabfileProtocol.swift in Sources */,
 				D5BAFD121F7DAAFC0030B324 /* ArgumentProcessor.swift in Sources */,
 				B302067C1F5E3E9000DE6EBD /* GymfileProtocol.swift in Sources */,
@@ -274,6 +273,7 @@
 				B3BA65AF1F5A2D5C00B34850 /* RunnerArgument.swift in Sources */,
 				D5B8A5B31FFDC49E00536B24 /* ControlCommand.swift in Sources */,
 				1257253924B7992C00E04FA3 /* main.swift in Sources */,
+				013DE1EC28AA3C4200D9BF44 /* Matchfile.swift in Sources */,
 				B302067E1F5E3E9000DE6EBD /* PrecheckfileProtocol.swift in Sources */,
 				B3BA65AD1F5A269100B34850 /* SocketResponse.swift in Sources */,
 				D55B28C71F6C588300DC42C5 /* Scanfile.swift in Sources */,
