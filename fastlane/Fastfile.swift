@@ -56,10 +56,10 @@ class Fastfile: LaneFile {
             keychainName: keychainName,
             keychainPassword: .userDefined(keychainPassword)
         )
-
-        buildIosApp(xcodebuildFormatter: "xcpretty")
-        uploadToTestflight()
-        setAutomaticSignin(true)
+//
+//        buildIosApp(xcodebuildFormatter: "xcpretty")
+//        uploadToTestflight()
+//        setAutomaticSignin(true)
     }
 }
 
@@ -80,17 +80,25 @@ extension Fastfile {
     
     func createTmpKeychain(name: String, password: String) {
         desc("Create a keychain")
-        let filePath = "./keychains/\(name)-db"
+        let filePath = "~/Library/Keychains/\(name)-db"
         if FileManager.default.fileExists(atPath: filePath) {
             deleteKeychain(keychainPath: OptionalConfigValue(stringLiteral: filePath))
         }
+        
         createKeychain(
             name: .userDefined(name),
-            path: .userDefined(filePath),
             password: password,
             unlock: true,
             timeout: 0
         )
+        
+//        createKeychain(
+//            name: .userDefined(name),
+//            path: .userDefined(filePath),
+//            password: password,
+//            unlock: true,
+//            timeout: 0
+//        )
 
     }
 }
