@@ -57,7 +57,7 @@ class Fastfile: LaneFile {
             keychainPassword: .userDefined(keychainPassword)
         )
 
-        buildIosApp(xcodebuildFormatter: "xcpretty")
+//        buildIosApp(xcodebuildFormatter: "xcpretty")
 //        uploadToTestflight()
 //        setAutomaticSignin(true)
     }
@@ -65,17 +65,18 @@ class Fastfile: LaneFile {
 
 extension Fastfile {
     func setAutomaticSignin(_ enabled: Bool) {
-        let targets: [String]? = [iosTarget]
-        let targetsParam: OptionalConfigValue<[String]?> = .userDefined(targets)
-        
         automaticCodeSigning(
             path: "nRF-Wi-Fi-Provisioner.xcodeproj",
-            useAutomaticSigning: OptionalConfigValue(booleanLiteral: enabled),
-            teamId: OptionalConfigValue(stringLiteral: environmentVariable(get: "APP_STORE_CONNECT_TEAM_ID")),
-            targets: targetsParam,
+            useAutomaticSigning: .userDefined(enabled),
+            teamId: .userDefined(environmentVariable(get: "APP_STORE_CONNECT_TEAM_ID")),
+            targets: .userDefined([iosTarget]),
             codeSignIdentity: "iPhone Distribution",
-            profileName: OptionalConfigValue(stringLiteral: getProvisioningProfile(appIdentifier: environmentVariable(get: "DEVELOPER_APP_IDENTIFIER"))),
-            bundleIdentifier: OptionalConfigValue(stringLiteral: environmentVariable(get: "DEVELOPER_APP_IDENTIFIER")))
+            profileName: .userDefined(
+                getProvisioningProfile(
+                    appIdentifier: environmentVariable(get: "DEVELOPER_APP_IDENTIFIER")
+                )
+            ),
+            bundleIdentifier: .userDefined(environmentVariable(get: "DEVELOPER_APP_IDENTIFIER")))
     }
     
     func createTmpKeychain(name: String, password: String) {

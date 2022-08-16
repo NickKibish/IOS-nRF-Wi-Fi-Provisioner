@@ -3,8 +3,6 @@ public class Matchfile: MatchfileProtocol {
     public var type: String { "appstore" } // The default type, can be: appstore, adhoc, enterprise or development
     public var appIdentifier: [String] { [environmentVariable(get: "DEVELOPER_APP_IDENTIFIER")] }
     public var readonly: Bool { true }
-    public var gitBranch: String { "master" }
-    public var cloneBranchDirectly: Bool { true }
     
 //     var appIdentifier: [String] { return ["tools.fastlane.app", "tools.fastlane.app2"] }
 		// cat username:String { return "user@fastlane.tools" } // Your Apple Developer Portal username
