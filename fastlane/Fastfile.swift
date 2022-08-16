@@ -56,8 +56,8 @@ class Fastfile: LaneFile {
             keychainName: keychainName,
             keychainPassword: .userDefined(keychainPassword)
         )
-//
-//        buildIosApp(xcodebuildFormatter: "xcpretty")
+
+        buildIosApp(xcodebuildFormatter: "xcpretty")
 //        uploadToTestflight()
 //        setAutomaticSignin(true)
     }
