@@ -80,11 +80,17 @@ extension Fastfile {
     
     func createTmpKeychain(name: String, password: String) {
         desc("Create a keychain")
-        let filePath = "~/Library/Keychains/\(name)-db"
+        let filePath = "./keychains/\(name)-db"
         if FileManager.default.fileExists(atPath: filePath) {
             deleteKeychain(keychainPath: OptionalConfigValue(stringLiteral: filePath))
         }
-        createKeychain(name: OptionalConfigValue(stringLiteral: name), password: password, unlock: false, timeout: 0)
+        createKeychain(
+            name: .userDefined(name),
+            path: .userDefined(filePath),
+            password: password,
+            unlock: true,
+            timeout: 0
+        )
 
     }
 }
