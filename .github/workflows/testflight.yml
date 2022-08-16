@@ -45,10 +45,10 @@ jobs:
           DEVELOPER_PORTAL_TEAM_ID: '${{ secrets.DEVELOPER_PORTAL_TEAM_ID }}'
           USERNAME: '${{ secrets.USERNAME }}'
 
-      - name: Commit changed build number
-        uses: EndBug/add-and-commit@v9.0.1
-        with:
-          add: 'nRF-Wi-Fi-Provisioner.xcodeproj/project.pbxproj'
-          message: Incremented build number
-          pathspec_error_handling: exitAtEnd
+      # - name: Commit changed build number
+      #   uses: EndBug/add-and-commit@v9.0.1
+      #   with:
+      #     add: 'nRF-Wi-Fi-Provisioner.xcodeproj/project.pbxproj'
+      #     message: Incremented build number
+      #     pathspec_error_handling: exitAtEnd
 

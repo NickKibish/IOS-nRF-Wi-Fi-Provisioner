@@ -12,6 +12,8 @@ let appIdKey = "ASC_KEY_ID"
 let issuerIdKey = "ASC_ISSUER_ID"
 let privateKeyId = "ASC_PRIVATE_KEY"
 
+let iosTarget = "nRF-Wi-Fi-Provisioner (iOS)"
+
 class Fastfile: LaneFile {
     func loadAPIKey() {
         desc("Load the ASC API key")
@@ -23,63 +25,59 @@ class Fastfile: LaneFile {
         appStoreConnectApiKey(
             keyId: keyId,
             issuerId: issuerId,
-            keyContent: OptionalConfigValue(stringLiteral: keyContent),
+            keyContent: .userDefined(keyContent),
             isKeyContentBase64: true,
             inHouse: false
         )
     }
 
-
-    
-    func prepareSignIn() {
+    func incrementTestflightBuildNumber() {
+        let currentVersion = getVersionNumber(target: .userDefined(iosTarget))
+        let buildNumber = latestTestflightBuildNumber(
+            appIdentifier: "com.nordicsemi.nRF-Wi-Fi-Provisioner",
+            version: .userDefined(currentVersion)
+        )
         
+        incrementBuildNumber(buildNumber: .userDefined("\(buildNumber + 1)"))
     }
     
     func betaLane() {
         desc("Increment build number, build app and deploy to TestFlight")
         
-//        incrementBuildNumber()
-
-        let keyId = environmentVariable(get: "ASC_KEY_ID")
-        let issuerId = environmentVariable(get: "ASC_ISSUER_ID")
-        let keyContent = environmentVariable(get: "ASC_PRIVATE_KEY")
-
-        desc("loaded keys: \(keyId), issuer: \(issuerId), keyContent: \(keyContent)")
-
-        automaticCodeSigning(
-                path: "nRF-Wi-Fi-Provisioner.xcodeproj",
-                useAutomaticSigning: false
-        )
-
         let keychainName = environmentVariable(get: "TEMP_KEYCHAIN_USER")
         let keychainPassword = environmentVariable(get: "TEMP_KEYCHAIN_PASSWORD")
         createTmpKeychain(name: keychainName, password: keychainPassword)
         loadAPIKey()
+
+        incrementTestflightBuildNumber()
+        setAutomaticSignin(false)
+
         match(
             keychainName: keychainName,
-            keychainPassword: OptionalConfigValue(stringLiteral: keychainPassword)
+            keychainPassword: .userDefined(keychainPassword)
         )
 
-//        buildIosApp(xcodebuildFormatter: "xcpretty")
-        
-        
-        
-        gym(xcodebuildFormatter: "xcpretty")
-        
+        buildIosApp(xcodebuildFormatter: "xcpretty")
         uploadToTestflight()
-
-        automaticCodeSigning(
-                path: "nRF-Wi-Fi-Provisioner.xcodeproj",
-                useAutomaticSigning: true
-        )
-
-
-//        appStoreConnectApiKey(keyId: keyId, issuerId: issuerId, keyContent: OptionalConfigValue(stringLiteral: keyContent), isKeyContentBase64: true)
-
+        setAutomaticSignin(true)
     }
 }
 
 extension Fastfile {
+    func setAutomaticSignin(_ enabled: Bool) {
+        let targets: [String]? = [iosTarget]
+        let targetsParam: OptionalConfigValue<[String]?> = .userDefined(targets)
+        
+        automaticCodeSigning(
+            path: "nRF-Wi-Fi-Provisioner.xcodeproj",
+            useAutomaticSigning: OptionalConfigValue(booleanLiteral: enabled),
+            teamId: OptionalConfigValue(stringLiteral: environmentVariable(get: "APP_STORE_CONNECT_TEAM_ID")),
+            targets: targetsParam,
+            codeSignIdentity: "iPhone Distribution",
+            profileName: OptionalConfigValue(stringLiteral: getProvisioningProfile(appIdentifier: environmentVariable(get: "DEVELOPER_APP_IDENTIFIER"))),
+            bundleIdentifier: OptionalConfigValue(stringLiteral: environmentVariable(get: "DEVELOPER_APP_IDENTIFIER")))
+    }
+    
     func createTmpKeychain(name: String, password: String) {
         desc("Create a keychain")
         let filePath = "~/Library/Keychains/\(name)-db"
