@@ -761,7 +761,7 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nordicsemi.nRF-Wi-Fi-Provisioner";
 				PRODUCT_NAME = "nRF-Wi-Fi-Provisioner";
-				PROVISIONING_PROFILE_SPECIFIER = "454d81e9-20b9-42c8-9cc9-d6d3f45cc0f7";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.nordicsemi.nRF-Wi-Fi-Provisioner";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -794,7 +794,7 @@
 				MARKETING_VERSION = 0.8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nordicsemi.nRF-Wi-Fi-Provisioner";
 				PRODUCT_NAME = "nRF-Wi-Fi-Provisioner";
-				PROVISIONING_PROFILE_SPECIFIER = "454d81e9-20b9-42c8-9cc9-d6d3f45cc0f7";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.nordicsemi.nRF-Wi-Fi-Provisioner";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
