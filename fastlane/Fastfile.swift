@@ -57,7 +57,7 @@ class Fastfile: LaneFile {
             keychainPassword: .userDefined(keychainPassword)
         )
 
-//        buildIosApp(xcodebuildFormatter: "xcpretty")
+        buildIosApp(xcodebuildFormatter: "xcpretty")
 //        uploadToTestflight()
 //        setAutomaticSignin(true)
     }
@@ -71,11 +71,12 @@ extension Fastfile {
             teamId: .userDefined(environmentVariable(get: "APP_STORE_CONNECT_TEAM_ID")),
             targets: .userDefined([iosTarget]),
             codeSignIdentity: "iPhone Distribution",
-            profileName: .userDefined(
-                getProvisioningProfile(
-                    appIdentifier: environmentVariable(get: "DEVELOPER_APP_IDENTIFIER")
-                )
-            ),
+            profileName: "match AppStore com.nordicsemi.nRF-Wi-Fi-Provisioner",
+//                    .userDefined(
+//                getProvisioningProfile(
+//                    appIdentifier: environmentVariable(get: "DEVELOPER_APP_IDENTIFIER")
+//                )
+//            ),
             bundleIdentifier: .userDefined(environmentVariable(get: "DEVELOPER_APP_IDENTIFIER")))
     }
     
