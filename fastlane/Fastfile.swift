@@ -57,23 +57,24 @@ class Fastfile: LaneFile {
             keychainPassword: .userDefined(keychainPassword)
         )
         
-        gym(
-            scheme: "nRF-Wi-Fi-Provisioner (iOS)",
-            configuration: "Release",
-            exportOptions: .userDefined(
-                [
-                    "method" : "app-store",
-                    "provisioningProfiles" : [
-                        "com.nordicsemi.nRF-Wi-Fi-Provisioner" : "match AppStore com.nordicsemi.nRF-Wi-Fi-Provisioner"
-                    ],
-                    "compileBitcode" : true
-                ]
-            ),
-            xcodebuildFormatter: "xcpretty"
-        )
+//        gym(
+//            scheme: "nRF-Wi-Fi-Provisioner (iOS)",
+//            configuration: "Release",
+//            exportOptions: .userDefined(
+//                [
+//                    "method" : "app-store",
+//                    "provisioningProfiles" : [
+//                        "com.nordicsemi.nRF-Wi-Fi-Provisioner" : "match AppStore com.nordicsemi.nRF-Wi-Fi-Provisioner"
+//                    ],
+//                    "compileBitcode" : true
+//                ]
+//            ),
+//            xcodebuildFormatter: "xcpretty"
+//        )
 
-//        buildIosApp(xcodebuildFormatter: "xcpretty")
-//        uploadToTestflight()
+        buildIosApp(xcodebuildFormatter: "xcpretty")
+        uploadToTestflight()
+        automaticCodeSigning(path: "nRF-Wi-Fi-Provisioner.xcodeproj", useAutomaticSigning: true)
 //        setAutomaticSignin(true)
     }
 }

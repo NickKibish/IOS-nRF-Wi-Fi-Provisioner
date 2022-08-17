@@ -93,7 +93,7 @@ open class Provisioner {
         guard case .success = response.status else {
             throw Error.unknownDeviceStatus
         }
-        return response.deviceStatus.state.toPublicStatus(withReason: response.deviceStatus.reason)
+        return response.deviceStatus.state.toPublicStatus()
     }
     
     open func startScan() async throws -> AnyPublisher<AccessPoint, Swift.Error> {
